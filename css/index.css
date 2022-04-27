@@ -243,7 +243,7 @@ body::-webkit-scrollbar {
 }
 .sec1 .secInner .sloganWrap .slogan::before {
     position: absolute;
-    left: 15%;
+    left: 22%;
     bottom: 15%;
     transform: translateX(-50%) translateY(100px);
     z-index: -1;
@@ -502,6 +502,11 @@ body::-webkit-scrollbar {
     background-size: cover;
     background-repeat: no-repeat;
     filter: drop-shadow(8px 8px 22px rgba(0, 0, 0, 0.151));
+    cursor: pointer;
+    transition: 0.35s;
+}
+.sec3 .secInner .pro_cont .catalogBox .catal_frt:hover {
+    opacity: 0.8;
 }
 .sec3 .secInner .pro_cont .catalogBox .catal_frt::before {
     position: absolute;
