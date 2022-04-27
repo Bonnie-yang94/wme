@@ -36,6 +36,7 @@
 html, body {
     font-family: "Montserrat_R";
     font-size: 10px;
+    word-break: keep-all;
     overflow-x: hidden;
 }
 section {
@@ -322,7 +323,7 @@ body::-webkit-scrollbar {
 
 .sec2 .secInner .intro_t .intro_t_txt {
     position: relative;
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
     text-align: center;
     font-size: 2.5rem;

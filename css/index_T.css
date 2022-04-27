@@ -87,9 +87,15 @@ html, body {
     gap: 8vw; 
 }
 .sec2 .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists .affi_list {
-    width: 18.5rem;
-    height: 18.5rem;
+    width: 22.5vw;
+    height: 22.5vw;
 
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists .affi_list1 > div {
+    transform: scale(0.8);
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists .affi_list11 > div {
+    transform: scale(0.85);
 }
 .sec2 .secInner .intro_b .intro_b_cont .affi_txtBox {
     justify-content: center;
@@ -103,8 +109,8 @@ html, body {
 
 /* sec3 */
 .sec3 .secInner .pro_cont .catalogBox .catal_frt {
-    width: 25rem;
-    height: 36rem;
+    width: 30vw;
+    height: 39vw;
 }
 .sec3 .secInner .pro_cont .catalogBox .catal_frt::before {
     font-size: 6rem;
