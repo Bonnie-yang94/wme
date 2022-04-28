@@ -320,15 +320,21 @@ body::-webkit-scrollbar {
     color: rgba(49, 73, 95, 0.8);
 
 }
+.sec2 .secInner .intro_t .intro_t_tit {
+    position: relative;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: -11rem;
+    margin-bottom: 3rem;
 
+}
 .sec2 .secInner .intro_t .intro_t_txt {
     position: relative;
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
     text-align: center;
     font-size: 2.5rem;
     line-height: 2;
-    margin-top: -10rem;
     
 }
 .sec2 .secInner .intro_b .intro_b_tit {
@@ -430,7 +436,7 @@ body::-webkit-scrollbar {
 }
 .sec2 .secInner .intro_b .intro_b_cont .affi_txtBox p {
     font-size: 2.2rem;
-    width: 80%;
+    width: 58%;
     word-break: keep-all;
     line-height: 2;
     margin-right: 6rem;
