@@ -1,18 +1,25 @@
 $(function(){
     // main
     function over(){
-        $(".sloganWrap").css({"overflow-y":"visible"});
+        $(".sec1").addClass("active");
     }
     function main(){
-        setTimeout(over,3000);
+        setTimeout(over,6500);
+    }
+    function flow(){
+        $(".sloganWrap").css({"overflow":"visible"});
+    }
+    function main2(){
+        setTimeout(flow,13000);
     }
     function partnerFunc(){
         $(".mainBox").addClass("active");
     }
     function partner(){
-        setTimeout(partnerFunc,9000);
+        setTimeout(partnerFunc,16000);
     }
     main();
+    main2();
     partner();
 
     // menu Scroll

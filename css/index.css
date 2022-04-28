@@ -215,8 +215,10 @@ body::-webkit-scrollbar {
     animation: bgColor 1.5s 10s linear forwards;
 }
 .sec1 .secInner .sloganWrap {
-    /* overflow-x: hidden; */
-    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    flex-wrap: wrap;
 }
 .sec1 .secInner .sloganWrap:nth-child(2) .slogan {
     animation-delay: 1s, 7s;
@@ -231,32 +233,54 @@ body::-webkit-scrollbar {
     line-height: 3;
     text-align: center;
     letter-spacing: 0.55rem;
-    transform: translateY(300px);
-    animation: 
+
+    /* animation: 
     rolling 2s linear forwards,
-    smoke 3s 6.5s linear forwards;
+    smoke 3s 6.5s linear forwards; */
 }
 
+.sec1 .secInner .sloganWrap2, .sec1 .secInner .sloganWrap3 {
+    display: none;
+}
+.sec1 .secInner .sloganWrap .slogan1 {
+    transform: translateY(300px);
+    font-size: 10rem;
+    animation: rolling 2s linear forwards,
+    smoke 3s 4s linear forwards;
+}
+
+.sec1 .secInner .sloganWrap .slogan2 strong {
+    letter-spacing: 4rem;
+}
 .sec1 .secInner .sloganWrap .slogan strong {
     font: 13rem "Montserrat_BB";
     color: var(--main-txt);
     z-index: 1;
 }
+.sec1.active .secInner .sloganWrap .slogan5 {
+    margin-left: 3rem;
+}
 .sec1 .secInner .sloganWrap .slogan::before {
     position: absolute;
-    left: 22%;
+    left: 46%;
     bottom: 15%;
     transform: translateX(-50%) translateY(100px);
     z-index: -1;
     opacity: 0;
-    animation: logoRoll 2s 3.2s linear forwards;
+    animation: logoRoll 2s 7s linear forwards;
 }
-.sec1 .secInner .sloganWrap:nth-child(2) .slogan::before {
+.sec1 .secInner .sloganWrap .slogan2::before {
     content: url("../img/logo/logo_wme.svg");
 }
-.sec1 .secInner .sloganWrap:nth-child(3) .slogan::before {
+.sec1 .secInner .sloganWrap .slogan3::before {
     left: 50%;
     content: url("../img/logo/logo_lg.svg");
+}
+.sec1 .secInner .web {
+    display: block;
+}
+.sec1 .secInner .tab {
+    display: none;
 }
 .sec1 .mainBox {
     display: none;
@@ -298,6 +322,27 @@ body::-webkit-scrollbar {
 }
 .sec1 .mainBox .partnerBox .partner_logo img {
     animation-delay: 5s;
+}
+/* active */
+.sec1.active .secInner .sloganWrap1 .slogan {
+    display: none;
+}
+.sec1.active .secInner .sloganWrap2, .sec1.active .secInner .sloganWrap3 {
+    display: flex;
+}
+.sec1.active .secInner .sloganWrap .slogan3, .sec1.active .secInner .sloganWrap .slogan4, .sec1.active .secInner .sloganWrap .slogan5 {
+    transform: translateY(300px);
+    animation: rolling 2s 3s linear forwards;
+}
+.sec1.active .secInner .sloganWrap .slogan2 {
+    transform: translateY(200px);
+    animation: rolling 3s linear forwards;
+}
+.sec1.active .secInner .sloganWrap .slogan2 strong {
+    animation: wme 4s 1s linear forwards;
+}
+.sec1.active .secInner .sloganWrap {
+    animation: smoke 2s 10s linear forwards;
 }
 /* sec2 */
 .sec2 {
@@ -607,6 +652,9 @@ footer .f_inner .f_top .f_topBtn::before {
 @keyframes smoke {
     50% {opacity: 1;}
     100% {opacity: 0; visibility: hidden; filter: blur(20px); transform: translateX(100px) translateY(-250px);}
+}
+@keyframes wme {
+    to {letter-spacing: 0;}
 }
 @keyframes bgColor {
     to {filter: grayscale(0%);}

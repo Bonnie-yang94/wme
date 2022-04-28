@@ -58,18 +58,33 @@ html, body {
 
 /* main */
     /* sec1 */
-
+    .sec1 .secInner .sloganWrap {
+        overflow: hidden;
+    }
 .sec1 .secInner .sloganWrap .slogan {
-    font-size: 5vw;
+    font-size: 5rem;
 }
 .sec1 .secInner .sloganWrap .slogan strong {
-    font-size: 10vw;
+    font-size: 8rem;
 }
 .sec1 .secInner .sloganWrap .slogan::before {
-    transform: translateX(-50%) translateY(100px) scale(.7);
+    transform: translateX(-40%) translateY(100px) scale(.7);
 }
 .sec1 .mainBox .partnerBox .partner_txt img {
     width: 85vw;
+}
+.sec1 .secInner .web {
+    display: none;
+}
+.sec1 .secInner .tab {
+    display: block;
+}
+.sec1 .secInner .sloganWrap4  {
+    display: none;
+}
+/* active */
+.sec1.active .secInner .sloganWrap4 {
+    display: flex;
 }
  /* sec2 */
 .sec2 .secInner .intro_t .intro_t_txt {
@@ -128,5 +143,5 @@ html, body {
 
 /* animation */
 @keyframes logoRoll {
-    to {opacity: .7; transform: translateX(-50%) translateY(0) scale(.5);}
+    to {opacity: .7; transform: translateX(-40%) translateY(0) scale(.5);}
 }
