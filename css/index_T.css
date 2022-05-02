@@ -66,7 +66,7 @@ html, body {
     font-size: 7vw;
 }
 .sec1 .secInner .sloganWrap .slogan_WME {
-    font-size: 14vw;
+    font-size: 12vw;
 }
 .sec1 .secInner .sloganWrap .slogan::before {
     transform: translateX(-40%) translateY(100px) scale(.7);
@@ -82,7 +82,7 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8rem;
+    gap: 5vw;
     position: relative;
     /* width: 70%;
     margin: 0 auto;
@@ -126,7 +126,7 @@ html, body {
     content: url("../img/logo/logo_lg.svg");
     position: absolute;
     opacity: 0;
-    transform: translateX(85%) translateY(0%);
+    transform: translateX(100%) translateY(0%) scale(.8);
     animation: logoRoll2 2s 6s linear forwards;
     z-index: -1;
 }
@@ -134,7 +134,7 @@ html, body {
     content: url("../img/logo/logo_wme.svg");
     position: absolute;
     opacity: 0;
-    transform: translateX(40%) translateY(0%);
+    transform: translateX(40%) translateY(0%) scale(.8);
     animation: logoRoll 2s 8s linear forwards;
 }
 .sec1 .secInner .tab .sloganWrap1:nth-of-type(1), .sec1 .secInner .tab .sloganWrap1:nth-of-type(3) {
@@ -146,14 +146,14 @@ html, body {
     position: absolute;
     left: 26%;
     top: 90%;
-    font: 14vw "Montserrat_BB";
+    font: 12vw "Montserrat_BB";
     color: var(--main-txt);
     
 }
 
 /* active */
 .sec1.active .secInner .tab .sloganBox {
-    height: 17vw;
+    height: 15vw;
 }
 .sec1.active .secInner .tab .sloganWrap1:nth-of-type(1) {
     animation: Wani 3s 1s linear forwards,
@@ -178,7 +178,7 @@ html, body {
     color: var(--main-txt);
 }
 .sec1.active .secInner .tab .sloganWrap3 {
-    margin-top: 22vw;
+    margin-top: 18vw;
 }
 .sec1.active .secInner .tab .sloganWrap1:nth-of-type(3)::before {
     animation: rolling2 1s 4.5s linear forwards;
@@ -255,8 +255,8 @@ html, body {
     to {top: 1%;}
 }
 @keyframes logoRoll {
-    to {opacity: .7; transform: translateX(40%) translateY(-53%)};
+    to {opacity: .7; transform: translateX(40%) translateY(-53%) scale(.8)};
 }
 @keyframes logoRoll2 {
-    to {opacity: .7; transform: translateX(85%) translateY(-53%)};
+    to {opacity: .7; transform: translateX(100%) translateY(-53%) scale(.8)};
 }

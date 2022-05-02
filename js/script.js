@@ -10,7 +10,11 @@ $(function(){
         $(".sloganWrap").css({"overflow":"visible"});
     }
     function main2(){
-        setTimeout(flow,9000);
+        if($(window).width() < 1200){
+            setTimeout(flow,8000);
+        }else {
+            setTimeout(flow,9000);
+        }
     }
     function partnerFunc(){
         $(".mainBox").addClass("active");
@@ -21,6 +25,10 @@ $(function(){
     main();
     main2();
     partner();
+
+    $(window).resize(function(){
+        main2();
+    })
 
     // menu Scroll
     const menu = $(".nav_list li");
