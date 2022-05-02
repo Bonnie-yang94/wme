@@ -214,67 +214,69 @@ body::-webkit-scrollbar {
     z-index: 1;
     animation: bgColor 1.5s 10s linear forwards;
 }
-.sec1 .secInner .sloganWrap {
+.sec1 .secInner .web .sloganWrap {
+    position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     overflow: hidden;
-    flex-wrap: wrap;
 }
-.sec1 .secInner .sloganWrap:nth-child(2) .slogan {
-    animation-delay: 1s, 7s;
+.sec1 .secInner .web .sloganWrap::before {
+    position: absolute;
+    opacity: 0;
+    animation: logoRoll 2s 10s linear forwards;
 }
-.sec1 .secInner .sloganWrap:nth-child(3) .slogan {
-    animation-delay: 1.5s, 7.5s;
+.sec1 .secInner .web .sloganWrap1::before {
+    left: 18%;
+    content: url("../img/logo/logo_wme.svg");
+}
+.sec1 .secInner .web .sloganWrap3::before {
+    left: 51%;
+    top: 52%;
+    content: url("../img/logo/logo_lg.svg");
+}
+.sec1 .secInner .web .sloganWrap1 {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.sec1 .secInner .web .sloganWrap2 {
+    position: relative;
+    left: 21rem;
+}
+.sec1 .secInner .web .sloganWrap3 {
+    transform: translateY(4rem);
+}
+.sec1 .secInner .web .sloganWrap > p {
+    transform: translateY(300px);
+}
+.sec1 .secInner .web .sloganWrap3  p {
+    text-align: center;
+}
+.sec1 .secInner .web .sloganWrap span {
+    transform: translateY(300px);
 }
 .sec1 .secInner .sloganWrap .slogan {
     position: relative;
+    top: 2rem;
     font: 8rem "Montserrat_SB";
-    color: rgb(238, 238, 238);
-    line-height: 3;
-    text-align: center;
-    letter-spacing: 0.55rem;
-
-    /* animation: 
-    rolling 2s linear forwards,
-    smoke 3s 6.5s linear forwards; */
+    color: var(--main-txt);
+    margin-right: 2.5rem;
+    letter-spacing: 5px;
 }
-
-.sec1 .secInner .sloganWrap2, .sec1 .secInner .sloganWrap3 {
-    display: none;
-}
-.sec1 .secInner .sloganWrap .slogan1 {
-    transform: translateY(300px);
-    font-size: 10rem;
+.sec1 .secInner .web .sloganWrap .slogan_F {
     animation: rolling 2s linear forwards,
-    smoke 3s 4s linear forwards;
+    smoke1 4s 3s linear forwards;
 }
-
-.sec1 .secInner .sloganWrap .slogan2 strong {
-    letter-spacing: 4rem;
-}
-.sec1 .secInner .sloganWrap .slogan strong {
+.sec1 .secInner .sloganWrap .sloganStr {
+    font: 13rem "Montserrat_BB";
+} 
+.sec1 .secInner .sloganWrap .slogan_WME {
     font: 13rem "Montserrat_BB";
     color: var(--main-txt);
-    z-index: 1;
-}
-.sec1.active .secInner .sloganWrap .slogan5 {
-    margin-left: 3rem;
-}
-.sec1 .secInner .sloganWrap .slogan::before {
-    position: absolute;
-    left: 46%;
-    bottom: 15%;
-    transform: translateX(-50%) translateY(100px);
-    z-index: -1;
-    opacity: 0;
-    animation: logoRoll 2s 7s linear forwards;
-}
-.sec1 .secInner .sloganWrap .slogan2::before {
-    content: url("../img/logo/logo_wme.svg");
-}
-.sec1 .secInner .sloganWrap .slogan3::before {
-    left: 50%;
-    content: url("../img/logo/logo_lg.svg");
+    animation: rolling 2s linear forwards;
 }
 .sec1 .secInner .web {
     display: block;
@@ -324,26 +326,60 @@ body::-webkit-scrollbar {
     animation-delay: 5s;
 }
 /* active */
-.sec1.active .secInner .sloganWrap1 .slogan {
-    display: none;
+.sec1.active .secInner .web .sloganWrap1 {
+    overflow: visible;
 }
-.sec1.active .secInner .sloganWrap2, .sec1.active .secInner .sloganWrap3 {
+.sec1.active .secInner .web .sloganWrap .slogan_W {
+    animation: rolling 2s linear forwards,
+    Wani 3s 1s linear forwards
+}
+.sec1.active .secInner .web .sloganWrap .slogan_M {
+    animation: rolling 2s linear forwards,
+    Mani 3s 1s linear forwards
+}
+.sec1.active .secInner .web .sloganWrap .slogan_E {
+    animation: rolling 2s linear forwards,
+    Eani 3s 1s linear forwards
+}
+.sec1.active .secInner .web .sloganWrap2, .sec1.active .secInner .web .sloganWrap3 {
+    display: block;
+}
+.sec1.active .secInner .web .sloganWrap > p {
+    animation: rolling 2s 4s linear forwards;
+}
+.sec1.active .secInner .web .sloganWrap {
+    animation: smoke2 2s 13s linear forwards;
+}
+
+@keyframes Wani {
+    to {transform: translate(5rem, -6rem);}
+}
+@keyframes Mani {
+    to {transform: translate(-22rem, -6rem);}
+}
+@keyframes Eani {
+    to {transform: translate(-39rem, -6rem);}
+} 
+/* .sec1.active .secInner .sloganWrap1 .slogan {
+    display: none;
+} */
+.sec1.active .secInner .web .sloganWrap2, .sec1.active .secInner .web .sloganWrap3 {
     display: flex;
 }
-.sec1.active .secInner .sloganWrap .slogan3, .sec1.active .secInner .sloganWrap .slogan4, .sec1.active .secInner .sloganWrap .slogan5 {
+.sec1.active .secInner .web .sloganWrap .slogan3, .sec1.active .secInner .web .sloganWrap .slogan4, .sec1.active .secInner .sloganWrap .slogan5 {
     transform: translateY(300px);
     animation: rolling 2s 3s linear forwards;
 }
-.sec1.active .secInner .sloganWrap .slogan2 {
+.sec1.active .secInner .web .sloganWrap .slogan2 {
     transform: translateY(200px);
     animation: rolling 3s linear forwards;
 }
-.sec1.active .secInner .sloganWrap .slogan2 strong {
+.sec1.active .secInner .web .sloganWrap .slogan2 strong {
     animation: wme 4s 1s linear forwards;
 }
-.sec1.active .secInner .sloganWrap {
+/* .sec1.active .secInner .sloganWrap {
     animation: smoke 2s 10s linear forwards;
-}
+} */
 /* sec2 */
 .sec2 {
     padding: 23rem 0;
@@ -647,11 +683,15 @@ footer .f_inner .f_top .f_topBtn::before {
     to {transform: translateY(0);}
 }
 @keyframes logoRoll {
-    to {opacity: .7; transform: translateX(-50%) translateY(0);}
+    to {opacity: .7; transform: translateY(-80%);}
 }
-@keyframes smoke {
+@keyframes smoke1 {
     50% {opacity: 1;}
     100% {opacity: 0; visibility: hidden; filter: blur(20px); transform: translateX(100px) translateY(-250px);}
+}
+@keyframes smoke2 {
+    50% {opacity: 1;}
+    100% {opacity: 0; visibility: hidden; filter: blur(20px);}
 }
 @keyframes wme {
     to {letter-spacing: 0;}

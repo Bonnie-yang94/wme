@@ -58,14 +58,15 @@ html, body {
 
 /* main */
     /* sec1 */
-    .sec1 .secInner .sloganWrap {
-        overflow: hidden;
-    }
-.sec1 .secInner .sloganWrap .slogan {
-    font-size: 5rem;
+.sec1 .secInner .sloganWrap {
+    overflow: hidden;
 }
-.sec1 .secInner .sloganWrap .slogan strong {
-    font-size: 8rem;
+.sec1 .secInner .sloganWrap .slogan {
+    top: 0;
+    font-size: 7vw;
+}
+.sec1 .secInner .sloganWrap .slogan_WME {
+    font-size: 14vw;
 }
 .sec1 .secInner .sloganWrap .slogan::before {
     transform: translateX(-40%) translateY(100px) scale(.7);
@@ -77,14 +78,113 @@ html, body {
     display: none;
 }
 .sec1 .secInner .tab {
-    display: block;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8rem;
+    position: relative;
+    /* width: 70%;
+    margin: 0 auto;
+    border: 1px solid red;
+    margin-left: 2rem; */
 }
-.sec1 .secInner .sloganWrap4  {
+.sec1 .secInner .tabInner {
+    position: absolute;
+}
+.sec1 .secInner .sloganWrap {
+    padding-left: 9vw;
+    justify-content: flex-start;
+}
+.sec1 .secInner .sloganWrap .sloganBox {
+    transform: translateY(300px);
+    animation: rolling 2s linear forwards;
+}
+.sec1 .secInner .sloganWrap .sloganBox .slogan_F {
+    animation: smoke1 2s 3s linear forwards;
+}
+.sec1 .secInner .sloganWrap2, .sec1 .secInner .sloganWrap3, .sec1 .secInner .sloganWrap4 {
     display: none;
 }
+.sec1 .secInner .sloganWrap .sloganStr {
+    font-size: 11vw;
+}
+.sec1 .secInner .sloganWrap2 .slogan_WME {
+    position: absolute;
+    top: 30%;
+    animation: rolling2 1.75s 3s linear forwards;
+}
+.sec1 .secInner .sloganWrap .slogan {
+    transform: translateY(300px);
+    animation: rolling 2.5s 3s linear forwards;
+}
+.sec1 .secInner .sloganWrap4 .slogan {
+    white-space: nowrap;
+    position: relative;
+}
+.sec1 .secInner .sloganWrap4 .slogan::before {
+    content: url("../img/logo/logo_lg.svg");
+    position: absolute;
+    opacity: 0;
+    transform: translateX(85%) translateY(0%);
+    animation: logoRoll2 2s 6s linear forwards;
+    z-index: -1;
+}
+.sec1 .secInner .tab .sloganWrap1:nth-of-type(1)::before {
+    content: url("../img/logo/logo_wme.svg");
+    position: absolute;
+    opacity: 0;
+    transform: translateX(40%) translateY(0%);
+    animation: logoRoll 2s 8s linear forwards;
+}
+.sec1 .secInner .tab .sloganWrap1:nth-of-type(1), .sec1 .secInner .tab .sloganWrap1:nth-of-type(3) {
+    position: relative;
+    
+}
+.sec1 .secInner .tab .sloganWrap1:nth-of-type(3)::before {
+    content: "'s";
+    position: absolute;
+    left: 26%;
+    top: 90%;
+    font: 14vw "Montserrat_BB";
+    color: var(--main-txt);
+    
+}
+
 /* active */
-.sec1.active .secInner .sloganWrap4 {
-    display: flex;
+.sec1.active .secInner .tab .sloganBox {
+    height: 17vw;
+}
+.sec1.active .secInner .tab .sloganWrap1:nth-of-type(1) {
+    animation: Wani 3s 1s linear forwards,
+    smoke2 2s 10s linear forwards;
+}
+.sec1.active .secInner .tab .sloganWrap1:nth-of-type(2) {
+    animation: Mani 3s 1s linear forwards,
+    smoke2 2s 10s linear forwards;
+}
+.sec1.active .secInner .tab .sloganWrap1:nth-of-type(3) {
+    animation: Eani 3s 1s linear forwards,
+    smoke2 2s 10s linear forwards;
+}
+.sec1.active .secInner .sloganWrap2, .sec1.active .secInner .sloganWrap3, .sec1.active .secInner .sloganWrap4 {
+    display: block;;
+}
+.sec1.active .secInner .tab .sloganWrap2 {
+    position: absolute;
+    height: 100%;
+    top: -1%;
+    left: 58%;
+    color: var(--main-txt);
+}
+.sec1.active .secInner .tab .sloganWrap3 {
+    margin-top: 22vw;
+}
+.sec1.active .secInner .tab .sloganWrap1:nth-of-type(3)::before {
+    animation: rolling2 1s 4.5s linear forwards;
+}
+.sec1.active .secInner .tab .sloganWrap {
+    animation: smoke2 2s 10s linear forwards;
 }
  /* sec2 */
 .sec2 .secInner .intro_t .intro_t_txt {
@@ -142,6 +242,21 @@ html, body {
 /* footer */
 
 /* animation */
+@keyframes Wani {
+    to {transform: translateX(0%);}
+}
+@keyframes Mani {
+    to {transform: translate(25%, -100%);}
+}
+@keyframes Eani {
+    to {transform: translate(45%, -200%);}
+}
+@keyframes rolling2 {
+    to {top: 1%;}
+}
 @keyframes logoRoll {
-    to {opacity: .7; transform: translateX(-40%) translateY(0) scale(.5);}
+    to {opacity: .7; transform: translateX(40%) translateY(-53%)};
+}
+@keyframes logoRoll2 {
+    to {opacity: .7; transform: translateX(85%) translateY(-53%)};
 }

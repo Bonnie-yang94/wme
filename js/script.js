@@ -4,19 +4,19 @@ $(function(){
         $(".sec1").addClass("active");
     }
     function main(){
-        setTimeout(over,6500);
+        setTimeout(over,3000);
     }
     function flow(){
         $(".sloganWrap").css({"overflow":"visible"});
     }
     function main2(){
-        setTimeout(flow,13000);
+        setTimeout(flow,9000);
     }
     function partnerFunc(){
         $(".mainBox").addClass("active");
     }
     function partner(){
-        setTimeout(partnerFunc,16000);
+        setTimeout(partnerFunc,15000);
     }
     main();
     main2();
